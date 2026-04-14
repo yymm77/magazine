@@ -3,230 +3,115 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>三原嘉明｜読み物マガジン</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --ink: #0f0f0f;
-    --paper: #f7f3ee;
-    --accent: #c0392b;
-    --muted: #6b6359;
-    --rule: #d4cec7;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    background: var(--paper);
-    color: var(--ink);
-    font-family: 'Noto Sans JP', sans-serif;
-    font-weight: 300;
-    line-height: 1.9;
-    font-size: 16px;
-  }
-
-  /* ヘッダー */
-  header {
-    border-bottom: 3px double var(--ink);
-    padding: 48px 24px 36px;
-    text-align: center;
-  }
-  .author {
-    font-size: 11px;
-    letter-spacing: .3em;
-    color: var(--muted);
-    display: block;
-    margin-bottom: 16px;
-  }
-  header h1 {
-    font-family: 'Noto Serif JP', serif;
-    font-size: clamp(30px, 6vw, 52px);
-    font-weight: 900;
-    letter-spacing: .06em;
-    margin-bottom: 12px;
-  }
-  .mag-sub {
-    font-size: 13px;
-    color: var(--muted);
-    letter-spacing: .15em;
-  }
-
-  /* メイン */
-  main {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 56px 24px 80px;
-  }
-
-  /* セクション */
-  .section {
-    margin-bottom: 64px;
-  }
-  .section-header {
-    display: flex;
-    align-items: baseline;
-    gap: 16px;
-    margin-bottom: 24px;
-    padding-bottom: 12px;
-    border-bottom: 2px solid var(--ink);
-  }
-  .section-header h2 {
-    font-family: 'Noto Serif JP', serif;
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: .05em;
-  }
-  .section-header .count {
-    font-size: 12px;
-    color: var(--muted);
-    letter-spacing: .1em;
-  }
-
-  /* 連載カード */
-  .series-card {
-    display: block;
-    text-decoration: none;
-    color: var(--ink);
-    border: 1px solid var(--rule);
-    padding: 24px 28px;
-    margin-bottom: 12px;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: center;
-    gap: 16px;
-    transition: border-color .15s, background .15s;
-  }
-  .series-card:hover {
-    border-color: var(--accent);
-    background: rgba(192,57,43,.03);
-  }
-  .series-card:hover .card-arrow { color: var(--accent); }
-
-  .card-label {
-    font-size: 11px;
-    letter-spacing: .2em;
-    color: var(--muted);
-    display: block;
-    margin-bottom: 6px;
-  }
-  .card-title {
-    font-family: 'Noto Serif JP', serif;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 1.5;
-    display: block;
-    margin-bottom: 8px;
-  }
-  .card-desc {
-    font-size: 13px;
-    color: var(--muted);
-    line-height: 1.75;
-  }
-  .card-meta {
-    font-size: 11px;
-    color: var(--rule);
-    margin-top: 10px;
-    display: block;
-    letter-spacing: .08em;
-  }
-  .card-arrow {
-    font-size: 24px;
-    color: var(--rule);
-    transition: color .15s;
-    flex-shrink: 0;
-  }
-
-  /* Coming soon */
-  .coming-soon {
-    border: 1px dashed var(--rule);
-    padding: 20px 28px;
-    margin-bottom: 12px;
-    color: var(--muted);
-  }
-  .coming-soon .card-title { color: var(--rule); }
-
-  /* フッター */
-  footer {
-    border-top: 3px double var(--ink);
-    padding: 28px 24px;
-    text-align: center;
-    font-size: 12px;
-    color: var(--muted);
-    letter-spacing: .1em;
-  }
-  footer a {
-    color: var(--muted);
-    text-decoration: none;
-  }
-  footer a:hover { color: var(--accent); }
-
-  @media (max-width: 480px) {
-    .series-card { grid-template-columns: 1fr; }
-    .card-arrow { display: none; }
-  }
-</style>
+<title>AIが封印された時代を生きる　全5回連載</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <span class="author">MIHARA YOSHIAKI</span>
-  <h1>マガジン</h1>
-  <span class="mag-sub">連載・読み物・考察</span>
+<header class="site-header">
+  <div class="header-inner">
+    <span class="header-series">制作者による考察連載　2026年</span>
+    <nav class="header-nav"><a href="#episodes">記事一覧 ↓</a></nav>
+  </div>
 </header>
 
-<main>
+<!-- インデックスヒーロー -->
+<section class="index-hero">
+  <div style="position:relative; max-width:800px; margin:0 auto;">
+    <p style="font-family:'Noto Sans JP',sans-serif; font-size:12px; letter-spacing:0.25em; color:var(--gold-light); margin-bottom:24px;">全 5 回 完 結 連 載</p>
+    <h1>AIが強すぎて<br>公開できない時代を、<br>私たちはどう生きるか</h1>
+    <p class="subtitle" style="margin-top:24px;">2026年春、アンソロピックは自社の最新AIモデルを「危険すぎる」として封印した。<br>人類の知識の外側に出てしまったAIと、私たちはどう向き合うべきか。</p>
 
-  <!-- AI・テクノロジー -->
-  <div class="section">
-    <div class="section-header">
-      <h2>AI・テクノロジー</h2>
-      <span class="count">1連載</span>
-    </div>
+    <!-- キービジュアル図 -->
+    <div style="margin-top:48px;">
+    <svg viewBox="0 0 700 120" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;">
+      <!-- 人類の知識の円 -->
+      <ellipse cx="280" cy="60" rx="220" ry="48" fill="none" stroke="rgba(184,134,11,0.4)" stroke-width="1.5" stroke-dasharray="6,4"/>
+      <text x="160" y="64" text-anchor="middle" font-size="13" fill="rgba(245,240,232,0.6)">人類の知識・認識能力の範囲</text>
 
-    <a class="series-card" href="ai-report-index.html">
-      <div>
-        <span class="card-label">全5回・完結</span>
-        <span class="card-title">AI革命と仕事の未来</span>
-        <span class="card-desc">10兆パラメーターのAIが登場した今、私たちの仕事はどう変わるのか。クロード・ミトスの衝撃から、個人が今すべきことまでを5回にわたって考える。</span>
-        <span class="card-meta">2026年4月</span>
-      </div>
-      <span class="card-arrow">›</span>
-    </a>
-  </div>
+      <!-- AIの点 -->
+      <circle cx="520" cy="60" r="28" fill="#8b1a1a"/>
+      <text x="520" y="56" text-anchor="middle" font-size="11" fill="white" font-weight="600">AI</text>
+      <text x="520" y="72" text-anchor="middle" font-size="10" fill="#d4a017">ミュートス</text>
 
-  <!-- 連載小説 -->
-  <div class="section">
-    <div class="section-header">
-      <h2>連載小説</h2>
-      <span class="count">準備中</span>
-    </div>
+      <!-- 矢印と「外側」 -->
+      <line x1="390" y1="60" x2="488" y2="60" stroke="#b8860b" stroke-width="1.5"/>
+      <polygon points="488,55 500,60 488,65" fill="#b8860b"/>
+      <text x="440" y="50" text-anchor="middle" font-size="10" fill="#b8860b">外側へ</text>
 
-    <div class="coming-soon">
-      <span class="card-label">連載予定・365話</span>
-      <span class="card-title">至誠の覚醒</span>
-      <span class="card-desc">少年期から始まる自伝的物語。姓名科学との出会い、先妻との別れ、師・牧正人史先生との縁——生かされて今を存在することの意味を問う物語。</span>
-      <span class="card-meta">近日公開</span>
+      <!-- 封印マーク -->
+      <text x="520" y="104" text-anchor="middle" font-size="11" fill="#d4a017">🔒 封印</text>
+    </svg>
     </div>
   </div>
+</section>
 
-  <!-- 論考・提言 -->
-  <div class="section">
-    <div class="section-header">
-      <h2>論考・提言</h2>
-      <span class="count">準備中</span>
-    </div>
+<!-- 連載イントロ -->
+<div class="series-intro" style="padding-top:64px;">
+  <p>2026年4月、世界のAI開発史において、おそらく後から振り返れば転換点として記録されるであろう出来事が起きた。AI安全性を最も重視してきた企業が、自社の最高傑作を「危険すぎる」として一般公開しないという判断を下したのだ。</p>
+  <p>27年間、世界中の優秀なエンジニアが見つけられなかったソフトウェアの欠陥を、AIは数千件発見した。その能力は、人間の認識能力の「外側」に出てしまっていた。</p>
+  <p>この連載では、その出来事が意味することを5回にわたって考察する。AIの能力とは何か。私たちの仕事はどう変わるのか。そしてこの時代に人間の役割とは何か。恐れでも盲信でもない、第三の立ち位置を探る。</p>
+</div>
 
-    <div class="coming-soon">
-      <span class="card-label">考察シリーズ</span>
-      <span class="card-title">日本侵食の構造解析</span>
-      <span class="card-desc">史料と数値をもとに、日本が直面する構造的課題を読み解く論考シリーズ。</span>
-      <span class="card-meta">近日公開</span>
+<!-- 記事一覧 -->
+<div class="episodes-grid" id="episodes">
+
+  <a class="episode-card" href="ep1.html">
+    <div class="ep-number">01</div>
+    <div class="ep-content">
+      <div class="ep-label">第 1 回</div>
+      <div class="ep-title">封印されたAI――クロード・ミュートスとは何者か</div>
+      <div class="ep-desc">27年間誰も気づかなかった脆弱性を数千件発見し、攻撃コードまで自動生成できるAI。アンソロピックはなぜそれを「危険すぎる」として封印したのか。プロジェクト・グラスウイングとは何か。</div>
     </div>
+  </a>
+
+  <a class="episode-card" href="ep2.html">
+    <div class="ep-number">02</div>
+    <div class="ep-content">
+      <div class="ep-label">第 2 回　【核心】</div>
+      <div class="ep-title">AIは人類の知識の"外側"に出てしまった</div>
+      <div class="ep-desc">「より速い人間」から「人間とは異なる認識能力を持つ存在」へ。意図せず生まれた能力「創発」とは何か。AIの行動が読めない理由は「意識」があるからではない。では何か。</div>
+    </div>
+  </a>
+
+  <a class="episode-card" href="ep3.html">
+    <div class="ep-number">03</div>
+    <div class="ep-content">
+      <div class="ep-label">第 3 回</div>
+      <div class="ep-title">あなたの仕事は消えるのか、変わるのか</div>
+      <div class="ep-desc">仕事への影響は4つのパターンに分けられる。消える・変わる・生まれる・価値が上がる。同じ産業の中で同時進行するこの変化の中で、自分はどのレイヤーにいるのか。</div>
+    </div>
+  </a>
+
+  <a class="episode-card" href="ep4.html">
+    <div class="ep-number">04</div>
+    <div class="ep-content">
+      <div class="ep-label">第 4 回</div>
+      <div class="ep-title">私たちは見えない守護者に守られて生きている</div>
+      <div class="ep-desc">AIが発見した脆弱性の修正は、あなたが知らないうちにブラウザのアップデートに含まれて届く。しかし攻撃側もAIを使い始めている。今日から実践できる5つの具体的な行動。</div>
+    </div>
+  </a>
+
+  <a class="episode-card" href="ep5.html">
+    <div class="ep-number">05</div>
+    <div class="ep-content">
+      <div class="ep-label">第 5 回（最終回）</div>
+      <div class="ep-title">AIが封印される時代の、人間の役割とは</div>
+      <div class="ep-desc">核技術・暗号技術の歴史と比較しながら、強力すぎる技術と人類の対処パターンを考える。恐れでも盲信でもない、第三の立ち位置とは。「生かされて今を存在する」という視点から。</div>
+    </div>
+  </a>
+
+</div>
+
+<!-- 免責事項 -->
+<div style="max-width:900px; margin:0 auto; padding:0 24px 64px;">
+  <div class="disclaimer">
+    ※本連載はYouTube動画の内容をもとにした制作者による考察です。動画内で引用される数字・事例・固有名称（「クロード・ミュートス」を含む）の正確性について、制作者は独自の検証を行っていません。一次情報の確認は読者ご自身にお願いします。
   </div>
+</div>
 
-</main>
-
-<footer>
-  <p>© 2026 Mihara Yoshiaki &nbsp;|&nbsp;
-  <a href="https://yymm77.github.io/seimei-kagaku/">姓名科学・予測ツールサイト</a></p>
+<footer class="site-footer">
+  <p>連載「AIが封印された時代を生きる」　全5回　制作者による考察　2026年</p>
 </footer>
 
 </body>
