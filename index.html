@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>三原嘉明｜読み物マガジン</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --paper: #f7f3ee;
+    --accent: #c0392b;
+    --muted: #6b6359;
+    --rule: #d4cec7;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 300;
+    line-height: 1.9;
+    font-size: 16px;
+  }
+
+  /* ヘッダー */
+  header {
+    border-bottom: 3px double var(--ink);
+    padding: 48px 24px 36px;
+    text-align: center;
+  }
+  .author {
+    font-size: 11px;
+    letter-spacing: .3em;
+    color: var(--muted);
+    display: block;
+    margin-bottom: 16px;
+  }
+  header h1 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(30px, 6vw, 52px);
+    font-weight: 900;
+    letter-spacing: .06em;
+    margin-bottom: 12px;
+  }
+  .mag-sub {
+    font-size: 13px;
+    color: var(--muted);
+    letter-spacing: .15em;
+  }
+
+  /* メイン */
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 56px 24px 80px;
+  }
+
+  /* セクション */
+  .section {
+    margin-bottom: 64px;
+  }
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--ink);
+  }
+  .section-header h2 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: .05em;
+  }
+  .section-header .count {
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: .1em;
+  }
+
+  /* 連載カード */
+  .series-card {
+    display: block;
+    text-decoration: none;
+    color: var(--ink);
+    border: 1px solid var(--rule);
+    padding: 24px 28px;
+    margin-bottom: 12px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 16px;
+    transition: border-color .15s, background .15s;
+  }
+  .series-card:hover {
+    border-color: var(--accent);
+    background: rgba(192,57,43,.03);
+  }
+  .series-card:hover .card-arrow { color: var(--accent); }
+
+  .card-label {
+    font-size: 11px;
+    letter-spacing: .2em;
+    color: var(--muted);
+    display: block;
+    margin-bottom: 6px;
+  }
+  .card-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .card-desc {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.75;
+  }
+  .card-meta {
+    font-size: 11px;
+    color: var(--rule);
+    margin-top: 10px;
+    display: block;
+    letter-spacing: .08em;
+  }
+  .card-arrow {
+    font-size: 24px;
+    color: var(--rule);
+    transition: color .15s;
+    flex-shrink: 0;
+  }
+
+  /* Coming soon */
+  .coming-soon {
+    border: 1px dashed var(--rule);
+    padding: 20px 28px;
+    margin-bottom: 12px;
+    color: var(--muted);
+  }
+  .coming-soon .card-title { color: var(--rule); }
+
+  /* フッター */
+  footer {
+    border-top: 3px double var(--ink);
+    padding: 28px 24px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: .1em;
+  }
+  footer a {
+    color: var(--muted);
+    text-decoration: none;
+  }
+  footer a:hover { color: var(--accent); }
+
+  @media (max-width: 480px) {
+    .series-card { grid-template-columns: 1fr; }
+    .card-arrow { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <span class="author">MIHARA YOSHIAKI</span>
+  <h1>マガジン</h1>
+  <span class="mag-sub">連載・読み物・考察</span>
+</header>
+
+<main>
+
+  <!-- AI・テクノロジー -->
+  <div class="section">
+    <div class="section-header">
+      <h2>AI・テクノロジー</h2>
+      <span class="count">1連載</span>
+    </div>
+
+    <a class="series-card" href="ai-report-index.html">
+      <div>
+        <span class="card-label">全5回・完結</span>
+        <span class="card-title">AI革命と仕事の未来</span>
+        <span class="card-desc">10兆パラメーターのAIが登場した今、私たちの仕事はどう変わるのか。クロード・ミトスの衝撃から、個人が今すべきことまでを5回にわたって考える。</span>
+        <span class="card-meta">2026年4月</span>
+      </div>
+      <span class="card-arrow">›</span>
+    </a>
+  </div>
+
+  <!-- 連載小説 -->
+  <div class="section">
+    <div class="section-header">
+      <h2>連載小説</h2>
+      <span class="count">準備中</span>
+    </div>
+
+    <div class="coming-soon">
+      <span class="card-label">連載予定・365話</span>
+      <span class="card-title">至誠の覚醒</span>
+      <span class="card-desc">少年期から始まる自伝的物語。姓名科学との出会い、先妻との別れ、師・牧正人史先生との縁——生かされて今を存在することの意味を問う物語。</span>
+      <span class="card-meta">近日公開</span>
+    </div>
+  </div>
+
+  <!-- 論考・提言 -->
+  <div class="section">
+    <div class="section-header">
+      <h2>論考・提言</h2>
+      <span class="count">準備中</span>
+    </div>
+
+    <div class="coming-soon">
+      <span class="card-label">考察シリーズ</span>
+      <span class="card-title">日本侵食の構造解析</span>
+      <span class="card-desc">史料と数値をもとに、日本が直面する構造的課題を読み解く論考シリーズ。</span>
+      <span class="card-meta">近日公開</span>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2026 Mihara Yoshiaki &nbsp;|&nbsp;
+  <a href="https://yymm77.github.io/seimei-kagaku/">姓名科学・予測ツールサイト</a></p>
+</footer>
+
+</body>
+</html>
