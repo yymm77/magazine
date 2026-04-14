@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第4回　私たちは見えない守護者に守られて生きている</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <span class="header-series">連載｜AIが封印された時代を生きる</span>
+    <nav class="header-nav"><a href="index.html">← 連載トップへ</a></nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="episode-badge">第 4 回　全 5 回</div>
+    <h1>私たちは<em>見えない守護者</em>に<br>守られて生きている</h1>
+    <p class="hero-meta">2026年　制作者による考察連載</p>
+  </div>
+</section>
+
+<main class="main-content">
+
+  <p class="lead">あなたは今日、何回スマートフォンを触っただろうか。その一つひとつの動作の背後に、あなたが知らない無数のソフトウェアが動いている。そしてそのソフトウェアに、数十年前から誰も気づかなかった欠陥が潜んでいた。</p>
+
+  <div class="section">
+    <h2>見えないインフラとして生きる</h2>
+    <p>私たちは普段、電力網の安全を維持する仕組みを詳細には知らない。水道水が飲める状態を保つための処理システムも、多くの人には見えていない。それでも電気を使い、水を飲んでいる。</p>
+    <p>AIが封印される世界では、デジタルセキュリティもそのような「見えないインフラ」になっていく可能性がある。あなたのブラウザが次のアップデートを受け取る時、その中にミュートスが発見した脆弱性への修正が含まれているかもしれない。あなたはその脆弱性が何であったかを知らないままだ。</p>
+
+    <!-- 図：見えないインフラの構造 -->
+    <div class="figure">
+      <div class="figure-title">図10　デジタル社会を支える「見えないインフラ」の層構造</div>
+      <div class="svg-wrap">
+      <svg viewBox="0 0 580 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:580px;">
+        <!-- 層1：ユーザー -->
+        <rect x="160" y="10" width="260" height="44" rx="3" fill="#f5f0e8" stroke="#c8bfb0"/>
+        <text x="290" y="37" text-anchor="middle" font-size="13" fill="#3d342a" font-weight="600">あなた（ユーザー）</text>
+
+        <!-- 矢印 -->
+        <line x1="290" y1="54" x2="290" y2="70" stroke="#c8bfb0" stroke-width="1.5"/>
+        <polygon points="285,68 290,76 295,68" fill="#c8bfb0"/>
+
+        <!-- 層2：アプリ -->
+        <rect x="100" y="76" width="380" height="44" rx="3" fill="#ede7d9" stroke="#c8bfb0"/>
+        <text x="290" y="103" text-anchor="middle" font-size="12" fill="#3d342a">ブラウザ・アプリ・ソフトウェア</text>
+
+        <line x1="290" y1="120" x2="290" y2="136" stroke="#c8bfb0" stroke-width="1.5"/>
+        <polygon points="285,134 290,142 295,134" fill="#c8bfb0"/>
+
+        <!-- 層3：OS -->
+        <rect x="50" y="142" width="480" height="44" rx="3" fill="#6b6258"/>
+        <text x="290" y="169" text-anchor="middle" font-size="12" fill="#f5f0e8">オペレーティングシステム（OS）</text>
+
+        <line x1="290" y1="186" x2="290" y2="202" stroke="#b8860b" stroke-width="1.5"/>
+        <polygon points="285,200 290,208 295,200" fill="#b8860b"/>
+
+        <!-- 層4：AIセキュリティ -->
+        <rect x="20" y="208" width="540" height="44" rx="3" fill="#1a1410" stroke="#b8860b"/>
+        <text x="290" y="230" text-anchor="middle" font-size="12" fill="#d4a017" font-weight="600">AIセキュリティ層（見えない守護者）</text>
+        <text x="290" y="246" text-anchor="middle" font-size="10" fill="#9e9890">ミュートスが発見した脆弱性の修正・防御</text>
+      </svg>
+      </div>
+    </div>
+
+    <div class="callout warning">
+      <p>その見えないインフラが機能しなくなった時、あるいは方向性を誤った時に、私たちは気づくことさえできないかもしれない。電気が止まって初めて電力網の存在を意識するように。</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>攻撃側もAIを使い始めている</h2>
+    <p>プロジェクト・グラスウイングはミュートスを防御目的のみに限定している。しかし現実の世界では、悪意を持つ攻撃者たちが同様の能力を持つAIを開発しようとすることを止める方法はない。そして<strong>攻撃側は防御側のような倫理的制約を持たない</strong>。</p>
+
+    <!-- フィッシング攻撃の図 -->
+    <div class="figure">
+      <div class="figure-title">図11　AI製フィッシング vs 従来型フィッシングの比較</div>
+      <div class="svg-wrap">
+      <svg viewBox="0 0 580 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:580px;">
+        <!-- 従来 -->
+        <rect x="20" y="20" width="240" height="160" rx="4" fill="#f5f0e8" stroke="#c8bfb0"/>
+        <text x="140" y="50" text-anchor="middle" font-size="13" fill="#6b6258" font-weight="600">従来のフィッシング</text>
+        <text x="140" y="80" text-anchor="middle" font-size="22" fill="#c8bfb0">17%</text>
+        <text x="140" y="98" text-anchor="middle" font-size="11" fill="#9e9890">開封率（概算）</text>
+        <text x="140" y="130" text-anchor="middle" font-size="11" fill="#9e9890">怪しい日本語</text>
+        <text x="140" y="150" text-anchor="middle" font-size="11" fill="#9e9890">不自然な文面</text>
+        <text x="140" y="170" text-anchor="middle" font-size="11" fill="#9e9890">見抜きやすい</text>
+
+        <!-- AI製 -->
+        <rect x="320" y="20" width="240" height="160" rx="4" fill="#1a1410" stroke="#8b1a1a"/>
+        <text x="440" y="50" text-anchor="middle" font-size="13" fill="#d4a017" font-weight="600">AI製フィッシング</text>
+        <text x="440" y="80" text-anchor="middle" font-size="22" fill="#8b1a1a" font-weight="700">78%</text>
+        <text x="440" y="98" text-anchor="middle" font-size="11" fill="#9e9890">開封率（動画内データ）</text>
+        <text x="440" y="130" text-anchor="middle" font-size="11" fill="#f5f0e8">あなたの名前を正確に使用</text>
+        <text x="440" y="150" text-anchor="middle" font-size="11" fill="#f5f0e8">サービス画面を完全コピー</text>
+        <text x="440" y="170" text-anchor="middle" font-size="11" fill="#d4a017">見抜くのが極めて困難</text>
+
+        <!-- 倍率 -->
+        <text x="290" y="108" text-anchor="middle" font-size="13" fill="#b8860b" font-weight="600">4.5倍</text>
+        <text x="290" y="126" text-anchor="middle" font-size="10" fill="#9e9890">の効果</text>
+      </svg>
+      </div>
+    </div>
+
+    <p>あなたが今日受け取るメールの中に、AIによって巧妙に作られた詐欺メールが紛れ込んでいる可能性がある。それはもはや「怪しいメール」には見えない。これは技術的な話ではない。あなたの日常生活に直結する話だ。</p>
+  </div>
+
+  <div class="section">
+    <h2>日本の現実</h2>
+    <p>2026年4月のわずか1週間の間に、日本国内で複数の深刻なインシデントが報告されている。ある銀行から3万件、不動産ポータルサイトから240万件の個人情報が流出したとされている。</p>
+    <p>情報処理推進機構（IPA）が発表した情報セキュリティ重大脅威2026では、AIの利用を巡るサイバーリスクが初めて3位にランクインした。そして深刻な格差がある。プロジェクト・グラスウイングに参加できるのはGoogleやMicrosoftのような大企業だ。日本の中小企業や自治体、医療機関、学校は、その輪に入れないまま脆弱なシステムを使い続けている可能性がある。</p>
+  </div>
+
+  <div class="section">
+    <h2>今日から実践できること</h2>
+    <p>パニックになる必要はない。しかし何もしなくていいわけでもない。今日から実践できることを、具体的に整理する。</p>
+
+    <!-- 5つのアクション -->
+    <div class="figure">
+      <div class="figure-title">図12　今日から実践できる5つのデジタル衛生</div>
+      <div class="svg-wrap">
+      <svg viewBox="0 0 600 340" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:600px;">
+        <!-- 1 -->
+        <circle cx="36" cy="44" r="20" fill="#8b1a1a"/>
+        <text x="36" y="50" text-anchor="middle" font-size="15" fill="white" font-weight="700">1</text>
+        <text x="68" y="38" font-size="13" fill="#1a1410" font-weight="600">ソフトウェアのアップデートを後回しにしない</text>
+        <text x="68" y="58" font-size="12" fill="#6b6258">修正パッチがアップデートの中に含まれている。後回しは脆弱性の放置と同義。</text>
+        <line x1="36" y1="64" x2="36" y2="84" stroke="#c8bfb0" stroke-width="1"/>
+
+        <!-- 2 -->
+        <circle cx="36" cy="104" r="20" fill="#8b1a1a"/>
+        <text x="36" y="110" text-anchor="middle" font-size="15" fill="white" font-weight="700">2</text>
+        <text x="68" y="98" font-size="13" fill="#1a1410" font-weight="600">二段階認証を設定する</text>
+        <text x="68" y="118" font-size="12" fill="#6b6258">パスワードが漏れても、アカウントを守れる可能性が大幅に高まる。</text>
+        <line x1="36" y1="124" x2="36" y2="144" stroke="#c8bfb0" stroke-width="1"/>
+
+        <!-- 3 -->
+        <circle cx="36" cy="164" r="20" fill="#8b1a1a"/>
+        <text x="36" y="170" text-anchor="middle" font-size="15" fill="white" font-weight="700">3</text>
+        <text x="68" y="158" font-size="13" fill="#1a1410" font-weight="600">フィッシングメールへの警戒水準を上げる</text>
+        <text x="68" y="178" font-size="12" fill="#6b6258">「急いで」「今すぐ」という言葉を使うメールは特に注意。AIは人間の焦りを利用する。</text>
+        <line x1="36" y1="184" x2="36" y2="204" stroke="#c8bfb0" stroke-width="1"/>
+
+        <!-- 4 -->
+        <circle cx="36" cy="224" r="20" fill="#8b1a1a"/>
+        <text x="36" y="230" text-anchor="middle" font-size="15" fill="white" font-weight="700">4</text>
+        <text x="68" y="218" font-size="13" fill="#1a1410" font-weight="600">AIの判断を盲信しない</text>
+        <text x="68" y="238" font-size="12" fill="#6b6258">「AIが言ったから正しい」という思考停止が最も危険。批判的に対話する姿勢を持つ。</text>
+        <line x1="36" y1="244" x2="36" y2="264" stroke="#c8bfb0" stroke-width="1"/>
+
+        <!-- 5 -->
+        <circle cx="36" cy="284" r="20" fill="#8b1a1a"/>
+        <text x="36" y="290" text-anchor="middle" font-size="15" fill="white" font-weight="700">5</text>
+        <text x="68" y="278" font-size="13" fill="#1a1410" font-weight="600">組織の中でセキュリティの話をする</text>
+        <text x="68" y="298" font-size="12" fill="#6b6258">個人の限界を超えるために、「うちの会社は大丈夫か」という問いを共有する。</text>
+      </svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>守られながら、守る</h2>
+    <p>見えないAIに守られながら生きる時代。それは受け身で生きる時代ではない。守られているという事実を理解した上で、自分でもできることをする。デジタル環境の中での自分の行動に、少しだけ意識を向ける。</p>
+
+    <div class="callout key">
+      <p>あなたがアップデートを適用する。二段階認証を設定する。不審なメールに引っかからない。その一つひとつが、デジタル社会全体の防衛線を少しずつ強くする。見えない守護者に守られながら、自分もまた見えない守護者の一人になる。</p>
+    </div>
+  </div>
+
+  <div class="next-episode">
+    <span class="next-label">次 回（最終回）</span>
+    <span class="next-title"><a href="ep5.html">第5回　AIが封印される時代の、人間の役割とは →</a></span>
+  </div>
+
+  <div class="disclaimer">
+    ※本記事はYouTube動画の内容をもとにした考察です。動画内で引用される数字・事例・固有名称の正確性について、制作者は独自の検証を行っていません。一次情報の確認は読者ご自身にお願いします。
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <p>連載「AIが封印された時代を生きる」　全5回　制作者による考察</p>
+</footer>
+
+</body>
+</html>

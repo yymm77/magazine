@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第1回　封印されたAI――クロード・ミュートスとは何者か</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <span class="header-series">連載｜AIが封印された時代を生きる</span>
+    <nav class="header-nav"><a href="index.html">← 連載トップへ</a></nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="episode-badge">第 1 回　全 5 回</div>
+    <h1>封印されたAI――<br><em>クロード・ミュートス</em>とは何者か</h1>
+    <p class="hero-meta">2026年　制作者による考察連載</p>
+  </div>
+</section>
+
+<main class="main-content">
+
+  <p class="lead">少し立ち止まって、考えてみてほしい。あなたが今日使っているブラウザ、スマートフォン、会社のシステム。その土台となるソフトウェアに、誰も気づかなかった致命的な欠陥が長年潜んでいたとしたら、どう感じるだろうか。</p>
+
+  <!-- 図1：タイムライン -->
+  <div class="figure">
+    <div class="figure-title">図1　2026年春　主要な出来事のタイムライン</div>
+    <div class="svg-wrap">
+    <svg viewBox="0 0 720 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:720px;">
+      <!-- 軸線 -->
+      <line x1="40" y1="100" x2="680" y2="100" stroke="#c8bfb0" stroke-width="2"/>
+      <!-- 点 -->
+      <circle cx="120" cy="100" r="7" fill="#8b1a1a"/>
+      <circle cx="280" cy="100" r="7" fill="#8b1a1a"/>
+      <circle cx="420" cy="100" r="7" fill="#b8860b"/>
+      <circle cx="560" cy="100" r="7" fill="#b8860b"/>
+      <circle cx="640" cy="100" r="7" fill="#3d342a"/>
+      <!-- 日付ラベル -->
+      <text x="120" y="130" text-anchor="middle" font-size="11" fill="#6b6258">3月26日</text>
+      <text x="280" y="130" text-anchor="middle" font-size="11" fill="#6b6258">3月31日</text>
+      <text x="420" y="130" text-anchor="middle" font-size="11" fill="#6b6258">4月7日</text>
+      <text x="560" y="130" text-anchor="middle" font-size="11" fill="#6b6258">4月8日</text>
+      <text x="640" y="130" text-anchor="middle" font-size="11" fill="#6b6258">4月10日</text>
+      <!-- 説明 -->
+      <text x="120" y="82" text-anchor="middle" font-size="10" fill="#8b1a1a">社内情報</text>
+      <text x="120" y="68" text-anchor="middle" font-size="10" fill="#8b1a1a">流出疑惑</text>
+      <text x="280" y="82" text-anchor="middle" font-size="10" fill="#8b1a1a">ソースコード</text>
+      <text x="280" y="68" text-anchor="middle" font-size="10" fill="#8b1a1a">流出報道</text>
+      <text x="420" y="72" text-anchor="middle" font-size="10" fill="#b8860b">グラスウイング</text>
+      <text x="420" y="58" text-anchor="middle" font-size="10" fill="#b8860b">発表・限定公開</text>
+      <text x="560" y="72" text-anchor="middle" font-size="10" fill="#b8860b">一般公開</text>
+      <text x="560" y="58" text-anchor="middle" font-size="10" fill="#b8860b">中止発表</text>
+      <text x="640" y="72" text-anchor="middle" font-size="10" fill="#3d342a">米政府が</text>
+      <text x="640" y="58" text-anchor="middle" font-size="10" fill="#3d342a">銀行に警告</text>
+    </svg>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>27年間、誰も気づかなかった</h2>
+    <p>アンソロピックという会社がある。2021年、OpenAI（チャットGPTの開発元）の元主要メンバーたちが独立して設立した企業だ。「AIの安全性を最優先にする」という哲学を会社の根幹に置き、業界内では最も慎重なAI開発者として知られてきた。</p>
+    <p>その会社が開発した最新モデル、クロード・ミュートスが2026年春、静かに、しかし決定的な形で世界に姿を現した。ミュートスが示した能力は、関係者に衝撃を与えた。</p>
+
+    <!-- 図2：能力比較 -->
+    <div class="figure">
+      <div class="figure-title">図2　ミュートスと既存モデルの能力比較（FireFox脆弱性悪用タスク）</div>
+      <div class="svg-wrap">
+      <svg viewBox="0 0 500 180" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:500px;">
+        <text x="20" y="36" font-size="13" fill="#3d342a">ミュートス</text>
+        <rect x="160" y="20" width="288" height="28" rx="2" fill="#8b1a1a"/>
+        <text x="454" y="40" font-size="13" fill="#8b1a1a" font-weight="600">72%</text>
+
+        <text x="20" y="96" font-size="13" fill="#3d342a">クロード・ソネット</text>
+        <rect x="160" y="80" width="0" height="28" rx="2" fill="#c8bfb0"/>
+        <text x="166" y="100" font-size="13" fill="#9e9890">失敗</text>
+
+        <text x="20" y="156" font-size="13" fill="#3d342a">クロード・オーパス</text>
+        <rect x="160" y="140" width="0" height="28" rx="2" fill="#c8bfb0"/>
+        <text x="166" y="160" font-size="13" fill="#9e9890">失敗</text>
+
+        <text x="20" y="178" font-size="10" fill="#9e9890">※動画内の情報に基づく概念図</text>
+      </svg>
+      </div>
+    </div>
+
+    <p>主要なオペレーティングシステムとウェブブラウザ全体において、数千件のゼロデイ脆弱性を発見したとされている。ゼロデイとは、開発者もセキュリティ専門家も世界中の誰もまだ気づいていない欠陥のことだ。</p>
+    <p>さらに驚くべき事例がある。動画・音楽の処理に広く使われているFFmpegというソフトウェアに対して、自動テストが500万回以上実行されていたにもかかわらず検出できなかった脆弱性を、ミュートスは発見した。27年間、世界中の優秀なエンジニアたちが見落としていたものを、AIが見つけたのだ。</p>
+  </div>
+
+  <div class="section">
+    <h2>「危険すぎる」という判断</h2>
+    <p>これほどの能力を持つモデルを、アンソロピックは一般公開しないことを決めた。プロジェクト・グラスウイングという業界横断的な枠組みを発表するとともに、ミュートスのプレビュー版をごく限られたパートナー企業にのみ提供した。</p>
+
+    <!-- 図3：参加企業 -->
+    <div class="figure">
+      <div class="figure-title">図3　プロジェクト・グラスウイング　主要参加組織</div>
+      <div class="svg-wrap">
+      <svg viewBox="0 0 640 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:640px;">
+        <!-- 中央 -->
+        <ellipse cx="320" cy="110" rx="70" ry="40" fill="#1a1410"/>
+        <text x="320" y="105" text-anchor="middle" font-size="11" fill="#d4a017" font-weight="600">Anthropic</text>
+        <text x="320" y="122" text-anchor="middle" font-size="10" fill="#f5f0e8">グラスウイング</text>
+
+        <!-- 周辺企業 -->
+        <g>
+          <rect x="20" y="20" width="110" height="32" rx="16" fill="#3d342a"/>
+          <text x="75" y="41" text-anchor="middle" font-size="11" fill="#f5f0e8">Amazon AWS</text>
+          <line x1="130" y1="36" x2="252" y2="88" stroke="#c8bfb0" stroke-width="1" stroke-dasharray="4,3"/>
+        </g>
+        <g>
+          <rect x="510" y="20" width="110" height="32" rx="16" fill="#3d342a"/>
+          <text x="565" y="41" text-anchor="middle" font-size="11" fill="#f5f0e8">Google</text>
+          <line x1="510" y1="36" x2="388" y2="88" stroke="#c8bfb0" stroke-width="1" stroke-dasharray="4,3"/>
+        </g>
+        <g>
+          <rect x="20" y="170" width="110" height="32" rx="16" fill="#3d342a"/>
+          <text x="75" y="191" text-anchor="middle" font-size="11" fill="#f5f0e8">Microsoft</text>
+          <line x1="130" y1="186" x2="252" y2="132" stroke="#c8bfb0" stroke-width="1" stroke-dasharray="4,3"/>
+        </g>
+        <g>
+          <rect x="510" y="170" width="110" height="32" rx="16" fill="#3d342a"/>
+          <text x="565" y="191" text-anchor="middle" font-size="11" fill="#f5f0e8">JPモルガン</text>
+          <line x1="510" y1="186" x2="388" y2="132" stroke="#c8bfb0" stroke-width="1" stroke-dasharray="4,3"/>
+        </g>
+        <g>
+          <rect x="255" y="172" width="130" height="32" rx="16" fill="#6b6258"/>
+          <text x="320" y="188" text-anchor="middle" font-size="10" fill="#f5f0e8">+ 40以上の重要インフラ組織</text>
+          <line x1="320" y1="172" x2="320" y2="150" stroke="#c8bfb0" stroke-width="1" stroke-dasharray="4,3"/>
+        </g>
+        <g>
+          <rect x="255" y="8" width="130" height="32" rx="16" fill="#3d342a"/>
+          <text x="320" y="24" text-anchor="middle" font-size="11" fill="#f5f0e8">Apple / Nvidia</text>
+          <line x1="320" y1="40" x2="320" y2="70" stroke="#c8bfb0" stroke-width="1" stroke-dasharray="4,3"/>
+        </g>
+      </svg>
+      </div>
+    </div>
+
+    <p>グラスウイングとは中南米に生息する蝶の名前だ。翅が透明で、まるで存在しないかのように見えながら、確かにそこにいる。サイバー空間に潜む「見えない脅威」を可視化するというプロジェクトの趣旨が、その名前に込められている。</p>
+  </div>
+
+  <div class="section">
+    <h2>これが意味すること</h2>
+    <p>これまでのAI開発は基本的に「もっと公開する」という方向に進んできた。OpenAIという名前そのものが、AIをオープンに共有するという理念を表していた。しかし今、その流れが逆転し始めている。</p>
+
+    <div class="callout key">
+      <p>もはや「どれだけ賢いAIを作れるか」という競争ではない。「賢くなりすぎたAIをどう扱うか」という、全く別の問題に人類は直面し始めているのだ。</p>
+    </div>
+
+    <p>AIが強くなればなるほど、公開することのリスクが高くなる。そして最終的には、公開しないという選択をせざるを得なくなる。クロード・ミュートスは、その転換点を示している。</p>
+  </div>
+
+  <div class="next-episode">
+    <span class="next-label">次 回</span>
+    <span class="next-title"><a href="ep2.html">第2回　AIは人類の知識の"外側"に出てしまった →</a></span>
+  </div>
+
+  <div class="disclaimer">
+    ※本記事はYouTube動画の内容をもとにした考察です。動画内で引用される数字・事例・固有名称の正確性について、制作者は独自の検証を行っていません。一次情報の確認は読者ご自身にお願いします。
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <p>連載「AIが封印された時代を生きる」　全5回　制作者による考察</p>
+</footer>
+
+</body>
+</html>
