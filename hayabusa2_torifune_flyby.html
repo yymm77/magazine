@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>はやぶさ2、小惑星トリフネへ超近接フライバイ成功 ― 秒速5キロの一瞬に刻んだ日本の技</title>
+<meta name="description" content="2026年7月5日、探査機はやぶさ2が小惑星トリフネへの超近接フライバイに成功。翌6日のJAXA記者説明会の内容から、その成果と地球防衛への意義をまとめます。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Noto+Serif+JP:wght@400;500;600;700&family=Zen+Old+Mincho:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#1a3a5c;
+    --gold:#b8960c;
+    --vermillion:#8b2e2e;
+    --washi:#f5f1e8;
+    --ink:#1a1208;
+    --navy-soft:#2c5378;
+    --line:rgba(26,58,92,.16);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--washi);
+    color:var(--ink);
+    font-family:"Noto Serif JP",serif;
+    line-height:1.95;
+    font-size:17px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:0 22px 90px;}
+
+  /* ── ヘッダー ── */
+  header.hero{
+    max-width:760px;margin:0 auto;padding:56px 22px 40px;
+    border-bottom:2px solid var(--navy);
+  }
+  .eyebrow{
+    font-family:"Zen Old Mincho",serif;
+    letter-spacing:.28em;
+    font-size:12.5px;
+    color:var(--vermillion);
+    font-weight:700;
+    margin:0 0 20px;
+  }
+  .eyebrow::before{content:"◆ ";color:var(--gold);}
+  h1{
+    font-family:"Shippori Mincho",serif;
+    font-weight:800;
+    color:var(--navy);
+    font-size:clamp(27px,5.4vw,40px);
+    line-height:1.42;
+    letter-spacing:.01em;
+    margin:0 0 22px;
+  }
+  .lede-meta{
+    display:flex;flex-wrap:wrap;gap:14px 22px;align-items:baseline;
+    font-family:"Zen Old Mincho",serif;font-size:13.5px;color:var(--navy-soft);
+  }
+  .lede-meta .date{font-weight:700;color:var(--navy);}
+  .lede-meta .tag{color:var(--gold);font-weight:700;letter-spacing:.06em;}
+
+  /* ── リード ── */
+  .lead{
+    font-family:"Shippori Mincho",serif;
+    font-size:19px;line-height:1.95;font-weight:500;
+    color:var(--navy);
+    margin:38px 0 10px;
+    padding-left:18px;
+    border-left:4px solid var(--gold);
+  }
+
+  /* ── 本文 ── */
+  h2{
+    font-family:"Shippori Mincho",serif;
+    font-weight:700;color:var(--navy);
+    font-size:22px;line-height:1.5;
+    margin:52px 0 4px;padding-bottom:0;
+  }
+  h2 .num{
+    display:block;
+    font-family:"Zen Old Mincho",serif;
+    font-size:12px;letter-spacing:.24em;color:var(--vermillion);
+    font-weight:700;margin-bottom:9px;
+  }
+  h2::after{
+    content:"";display:block;width:52px;height:3px;
+    background:var(--gold);margin-top:14px;margin-bottom:8px;
+  }
+  p{margin:18px 0;}
+  strong{color:var(--vermillion);font-weight:700;}
+
+  /* ── データ枠 ── */
+  .facts{
+    background:#fff;
+    border:1px solid var(--line);
+    border-top:3px solid var(--navy);
+    padding:24px 26px;margin:34px 0;
+    font-family:"Zen Old Mincho",serif;
+  }
+  .facts .ttl{
+    font-size:12.5px;letter-spacing:.2em;color:var(--vermillion);
+    font-weight:700;margin-bottom:14px;
+  }
+  .facts dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:9px 20px;}
+  .facts dt{color:var(--navy);font-weight:700;font-size:14.5px;white-space:nowrap;}
+  .facts dd{margin:0;font-size:15px;}
+  .facts .big{color:var(--vermillion);font-weight:700;}
+
+  /* ── 引用 ── */
+  blockquote{
+    margin:30px 0;padding:20px 24px;
+    background:rgba(26,58,92,.05);
+    border-left:4px solid var(--vermillion);
+    font-family:"Shippori Mincho",serif;
+    font-size:17.5px;color:var(--navy);line-height:1.85;
+  }
+  blockquote .who{
+    display:block;margin-top:12px;font-family:"Zen Old Mincho",serif;
+    font-size:13px;color:var(--navy-soft);font-weight:700;letter-spacing:.04em;
+  }
+  blockquote .who::before{content:"── ";color:var(--gold);}
+
+  /* ── 画像プレースホルダ ── */
+  .figph{
+    margin:32px 0;border:1px dashed rgba(26,58,92,.4);
+    background:repeating-linear-gradient(45deg,rgba(26,58,92,.03),rgba(26,58,92,.03) 10px,transparent 10px,transparent 20px);
+    padding:34px 22px;text-align:center;border-radius:2px;
+  }
+  .figph .lbl{font-family:"Zen Old Mincho",serif;font-size:13px;color:var(--navy);font-weight:700;letter-spacing:.08em;}
+  .figph .cap{font-size:12.5px;color:var(--navy-soft);margin-top:8px;line-height:1.7;}
+
+  /* ── 動画枠 ── */
+  .video-slot{
+    margin:32px 0;padding:22px;border:1px solid var(--line);background:#fff;text-align:center;
+  }
+  .video-slot .lbl{font-family:"Zen Old Mincho",serif;font-size:12.5px;letter-spacing:.1em;color:var(--vermillion);font-weight:700;margin-bottom:10px;}
+  .video-slot a{color:var(--navy);font-weight:700;text-decoration:none;border-bottom:2px solid var(--gold);}
+
+  /* ── 区切り ── */
+  .rule{border:0;height:1px;background:var(--line);margin:46px 0;}
+
+  /* ── フッター ── */
+  footer{max-width:760px;margin:0 auto;padding:0 22px;}
+  .tags{
+    font-family:"Zen Old Mincho",serif;font-size:14px;color:var(--navy);
+    line-height:2.1;margin:14px 0 30px;font-weight:500;
+  }
+  .tags span{color:var(--gold);font-weight:700;}
+  .uca{
+    border-top:2px solid var(--navy);padding-top:20px;margin-top:10px;
+    font-family:"Zen Old Mincho",serif;font-size:12.5px;color:var(--navy-soft);line-height:1.85;
+  }
+  .uca .mark{color:var(--gold);font-weight:700;letter-spacing:.1em;}
+  .src{font-size:12.5px;color:var(--navy-soft);line-height:1.85;margin-top:22px;font-family:"Zen Old Mincho",serif;}
+  .src a{color:var(--navy);}
+
+  @media(max-width:520px){
+    body{font-size:16px;}
+    .facts dl{grid-template-columns:1fr;gap:3px 0;}
+    .facts dt{margin-top:10px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <p class="eyebrow">宇宙探査ノート</p>
+  <h1>はやぶさ2、小惑星トリフネへ超近接フライバイ成功<br>― 秒速5キロの一瞬に刻んだ、日本の技</h1>
+  <div class="lede-meta">
+    <span class="date">2026年7月6日</span>
+    <span>JAXA記者説明会より</span>
+    <span class="tag">はやぶさ2＃ 拡張ミッション</span>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <p class="lead">秒速5キロ。まばたきの間に5キロを駆け抜ける速さで、探査機は小惑星のわずか数百メートル脇をすり抜けました。2026年7月5日、はやぶさ2が小惑星「トリフネ」への超近接フライバイに成功します。翌6日にJAXAが開いた記者説明会の内容から、この一瞬の成果をたどります。</p>
+
+  <div class="facts">
+    <div class="ttl">フライバイ 概要</div>
+    <dl>
+      <dt>実施日時</dt><dd>2026年7月5日 <span class="big">18時30分</span>頃（日本時間・誤差±1秒）</dd>
+      <dt>対象天体</dt><dd>小惑星「トリフネ」（旧称 2001 CC21）</dd>
+      <dt>相対速度</dt><dd class="big">秒速 約5.2キロ</dd>
+      <dt>目標接近距離</dt><dd>小惑星の中心から <span class="big">約800メートル</span></dd>
+      <dt>観測機器</dt><dd>ONC-T／NIRS3／TIR／LIDAR の四つ、すべてでデータ取得成功</dd>
+      <dt>機体状態</dt><dd>7月5日18時35分、地上で正常を確認</dd>
+    </dl>
+  </div>
+
+  <h2><span class="num">その一　舞台となった小惑星</span>トリフネという、細長い旅人</h2>
+  <p>トリフネは、2001年に発見された地球接近小惑星です。長らく符号の「2001 CC21」で呼ばれていましたが、2024年に「トリフネ」という愛称が贈られました。長いほうの差し渡しが500〜700メートルほど、自転周期はおよそ5時間。細長い形をしていると推定されてはいたものの、地上からの観測では形もサイズも誤差が大きく、その素顔は接近してみるまで霞の中にありました。</p>
+  <p>岩石が主体で炭素の少ない<strong>S型</strong>に分類される可能性が高く、炭素に富む黒いC型だったリュウグウとは、いわば正反対の顔立ちです。同じ探査機が、性格の違う二つの小惑星をその目で見る。それだけでも、今回の意味は小さくありません。</p>
+
+  <h2><span class="num">その二　神一重の接近</span>800メートルを、秒速5キロで</h2>
+  <p>今回の挑戦は「超近接フライバイ」と名づけられました。探査機を、あえて衝突すれすれの軌道までギリギリに寄せ、姿勢を変える角度を最小限に抑えることで、通り過ぎる一瞬に最良の観測を成立させる――そういう綱渡りの手法です。当初は1キロほどで検討されていた接近距離は、最終的に<strong>中心から約800メートル</strong>まで詰められました。</p>
+  <p>結果、再接近の時刻はほぼ狙いどおり。2026年7月5日18時30分に対し、誤差はわずか±1秒でした。ただ、最接近の距離そのものは、まだ確定していません。フライバイ直前の軌道制御で機体の姿勢が一瞬安定せず、カメラの撮影はできたものの、探査機側が小惑星の位置情報をうまく取り込めなかったのです。正確な距離は、これからの事後解析で見極められていきます。</p>
+
+  <h2><span class="num">その三　四つの目が捉えた素顔</span>「もう嬉しくてしょうがなかった」</h2>
+  <p>望遠の光学航法カメラ（ONC-T）、近赤外分光計（NIRS3）、中間赤外カメラ（TIR）、そしてレーザー高度計（LIDAR）。搭載する四つの観測機器の<strong>すべてでデータ取得に成功</strong>しました。しかも、いま地上に届いているのはその一部にすぎません。</p>
+  <p>公開された画像には、登壇者自身が息をのみました。最接近のわずか1秒前に撮られたトリフネは、<strong>二つの塊がくっついた「接触二重小惑星」</strong>とみられる姿をしていました。表面には岩（ボルダー）まで見てとれます。かつて探査した小惑星イトカワにどこか似た、瓦礫の寄せ集めのような表情です。</p>
+  <blockquote>
+    たくさん試験をしてきたが、そこで見えていた画像より、はるかに近く鮮明なものが撮れた。岩が見えている。こんな写真が撮れるとは、本当に思っていなかった。
+    <span class="who">三桝裕也 チーム長（会見での趣旨）</span>
+  </blockquote>
+  <p>吉川真さんは、トリフネはくっついてまだ間もない若い段階かもしれず、時が経てばくびれが埋まってイトカワのような姿になっていく可能性がある、と語りました。二つの小天体がぶつかっても壊し合わずにくっつく――そんな出来事が、太陽系の初期に何を意味していたのか。新たに手に入った素顔が、その問いに手がかりを与えてくれそうです。</p>
+
+  <div class="figph">
+    <div class="lbl">［ 画像挿入位置：ONC-Tが捉えたトリフネ ］</div>
+    <div class="cap">JAXA公式サイトの画像をご利用の際は、必ずクレジット（©JAXA、東京大学、千葉工業大学、東京科学大学、産業技術総合研究所、パリ天文台、カナリア天体物理研究所）を明記してください。</div>
+  </div>
+
+  <h2><span class="num">その四　走る馬から、矢を射抜く</span>LIDARが刻んだ、おそらく世界初</h2>
+  <p>今回、静かな快挙がもう一つありました。レーザー高度計（LIDAR）が、高速で通り過ぎるさなかに小惑星までの距離を実測したのです。LIDARが届くのは最も遠くて25キロ。秒速5キロで飛ぶ探査機にとって、それは最接近の数秒前だけに許された、まさに一瞬の窓でした。その窓で、二つの距離データがきちんと取れていました。</p>
+  <p>担当チームはこれを「疾走する馬から的を射抜くようなもの」と表現します。小惑星フライバイでLIDARの距離計測が成功したのは、<strong>おそらく世界で初めて</strong>とみられます。この一点が定まることで、他の観測データの解析精度も大きく上がります。</p>
+
+  <h2><span class="num">その五　地球防衛への一歩</span>「言うには、勇気のいる言葉」</h2>
+  <p>この探査は、単なる科学観測にとどまりません。地球に迫る小惑星を早く見つけ、必要なら軌道を変えて衝突を防ぐ――<strong>プラネタリーディフェンス（地球防衛）</strong>の実証という顔を持っています。</p>
+  <p>意味は二つあります。一つは、探査機を天体のごく近くまで正確に導けたこと。裏を返せば、日本も「ぶつけて軌道を変える」技術に手が届いたということです。もう一つは、すでに宇宙にある探査機を使い、迫る天体を素早く調べる「緊急偵察」を、実地でやってのけたこと。いずれも世界で初めての実現だといいます。</p>
+  <p>宇宙科学研究所の藤本正樹所長は、「地球防衛」という言葉の重さについて率直に語りました。</p>
+  <blockquote>
+    地球防衛は、言うには勇気のいる言葉だ。言った以上はやらなければいけない。リュウグウに行って、実は人類は小惑星のことをよく分かっていないと気づいた。ちゃんと調べることも地球防衛だと考え、踏み出してきた。
+    <span class="who">藤本正樹 宇宙科学研究所長（会見での趣旨）</span>
+  </blockquote>
+  <p>視線の先には、2029年4月13日があります。この日、小惑星アポフィスが地球のすぐ上空をかすめます。地球にはぶつかりませんが、人類が肉眼でその接近を見上げる初めての機会です。JAXAは欧州と組んだ「ラムセス」計画でこれに臨みます。今回のフライバイ成功は、その大役を担うにふさわしい実力を示した、という位置づけになります。</p>
+
+  <h2><span class="num">その六　十年を越えた機体と、育った若手</span>成功は、フライバイの前に決まっていた</h2>
+  <p>忘れてはならないのは、はやぶさ2がもともとフライバイのために造られた探査機ではない、ということです。リュウグウに寄り添う「ランデブー」用に設計された機体を、ソフトウェアの書き換えだけで高速フライバイに対応させる。しかも打ち上げから10年以上、プロセッサもメモリも古く、積める容量にも限りがある。その制約の中で、最小限の機能を工夫して積み込んだのが、今回の技術的な山場でした。</p>
+  <p>藤本所長は「今回のイベントのために、ほとんど開発のやり直しに近い努力があった」と振り返り、NECをはじめとするメーカー各社への感謝を述べました。そして三桝チーム長の言葉が、この拡張ミッションの核心を突いています。</p>
+  <blockquote>
+    引き継いだ若手が、この数年の運用の中でしっかり成長してくれた。私は正直、フライバイの成否に関わらず、途中でもうこのミッションは成功だと思っていた。若手の成長を見られた、その時点で。
+    <span class="who">三桝裕也 チーム長（会見での趣旨）</span>
+  </blockquote>
+
+  <h2><span class="num">その七　これから</span>次の目的地は、2031年</h2>
+  <p>休む間はありません。次の目標である2027年12月の地球スイングバイに向け、運用はすぐに始まります。今回撮った残りのデータは、その合間に少しずつ地上へ降ろしていき、すべてが揃うのは<strong>2026年の年末</strong>になる見込みです。</p>
+  <p>その先にあるのが、2031年に到着予定の小惑星「1998 KY26」。直径わずか十数メートル、自転周期はおよそ5分という、極めて速く回る小さな天体です。イオンエンジンはすでに限界を超えて働いており、そこへ至る道のりは平坦ではありません。それでも――初号機がさらに苦しい状況から地球へ帰ってきたように、はやぶさ2もまた、最後までその精神を見習うのでしょう。</p>
+
+  <hr class="rule">
+
+  <div class="video-slot">
+    <div class="lbl">▶ 会見の映像・公式資料はこちら</div>
+    <p style="margin:6px 0 0;">JAXAプレスリリース：<a href="https://www.jaxa.jp/press/2026/07/20260706-3_j.html" target="_blank" rel="noopener">小惑星「トリフネ」の画像・サイエンスデータ</a></p>
+    <p style="margin:10px 0 0;font-size:13px;color:#2c5378;">※会見動画を埋め込む場合は、この位置にYouTubeの埋め込みタグを貼り付けてください。</p>
+  </div>
+
+  <p class="src">
+    本記事は、JAXAが2026年7月6日に開催した記者説明会の内容および公式発表をもとに構成しています。登壇者の発言は、会見での趣旨を要約したものです。<br>
+    参考：JAXA公式サイト、および各報道。
+  </p>
+
+</div>
+
+<footer>
+  <p class="tags">
+    <span>#牧正人史　#マシレ予測</span>　#はやぶさ2　#トリフネ　#プラネタリーディフェンス
+  </p>
+  <div class="uca">
+    <a href="https://yymm77.github.io/seimei-kagaku/copyright-proposal.html" target="_blank" rel="noopener" style="color:#b8960c;font-weight:700;letter-spacing:.1em;text-decoration:none;border-bottom:1px solid #b8960c;">UCA</a>（Universal Creative Attribution）── 知的創造物の適正な帰属と対価還元を推進する取り組みに賛同しています。取り組みの詳細は<a href="https://yymm77.github.io/seimei-kagaku/copyright-proposal.html" target="_blank" rel="noopener" style="color:#1a3a5c;font-weight:700;">こちらの提案ページ</a>をご覧ください。<br>
+    本記事の文責は制作者にあります。事実関係はJAXA公式発表に準拠しています。
+  </div>
+</footer>
+
+</body>
+</html>
