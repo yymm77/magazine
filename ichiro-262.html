@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>262という聖域 ── イチロー・シーズン最多安打はなぜ破られないのか</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+JP:wght@400;500;600;700&family=Zen+Old+Mincho:wght@400;600;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#1a3a5c;
+    --gold:#b8960c;
+    --vermillion:#8b2e2e;
+    --washi:#f5f1e8;
+    --ink:#1a1208;
+    --navy-soft:#2c516f;
+    --line:#d9cfb8;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--washi);
+    color:var(--ink);
+    font-family:"Shippori Mincho","Noto Serif JP",serif;
+    line-height:1.95;
+    font-size:17px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:0 22px 80px;}
+
+  /* ---- ヘッダー ---- */
+  header.hero{
+    background:
+      linear-gradient(180deg, rgba(26,58,92,.94), rgba(26,58,92,.90)),
+      repeating-linear-gradient(135deg, rgba(255,255,255,.03) 0 2px, transparent 2px 22px);
+    color:var(--washi);
+    padding:64px 22px 52px;
+    text-align:center;
+    border-bottom:5px solid var(--gold);
+  }
+  header.hero .kicker{
+    font-family:"Zen Old Mincho",serif;
+    letter-spacing:.5em;
+    font-size:.72rem;
+    color:var(--gold);
+    margin:0 0 20px;
+    padding-left:.5em;
+  }
+  header.hero h1{
+    font-family:"Zen Old Mincho",serif;
+    font-weight:900;
+    font-size:2.35rem;
+    line-height:1.4;
+    margin:0 auto;
+    max-width:640px;
+  }
+  header.hero .big262{
+    font-family:"Zen Old Mincho",serif;
+    font-weight:900;
+    font-size:5.2rem;
+    color:var(--gold);
+    line-height:1;
+    margin:6px 0 18px;
+    text-shadow:0 2px 0 rgba(0,0,0,.25);
+  }
+  header.hero .sub{
+    font-size:.98rem;
+    color:#e7ddc7;
+    max-width:560px;
+    margin:22px auto 0;
+    line-height:1.9;
+  }
+
+  /* ---- 本文 ---- */
+  main{margin-top:44px;}
+  h2{
+    font-family:"Zen Old Mincho",serif;
+    font-weight:700;
+    font-size:1.55rem;
+    color:var(--navy);
+    margin:60px 0 4px;
+    padding-bottom:0;
+    line-height:1.5;
+  }
+  h2 .num{
+    display:block;
+    font-family:"Shippori Mincho",serif;
+    font-size:.72rem;
+    letter-spacing:.35em;
+    color:var(--gold);
+    margin-bottom:10px;
+  }
+  h2::after{
+    content:"";
+    display:block;
+    width:56px;height:3px;
+    background:var(--vermillion);
+    margin-top:14px;
+  }
+  h3{
+    font-family:"Zen Old Mincho",serif;
+    color:var(--navy);
+    font-size:1.15rem;
+    margin:38px 0 2px;
+  }
+  p{margin:16px 0;}
+  .lead{
+    font-size:1.12rem;
+    color:var(--navy);
+    font-weight:500;
+    border-left:4px solid var(--gold);
+    padding:2px 0 2px 18px;
+    margin:26px 0;
+  }
+  strong{color:var(--vermillion);font-weight:700;}
+  .navy-b{color:var(--navy);font-weight:700;}
+
+  /* ---- ヒーロー数値 ---- */
+  .statrow{
+    display:flex;flex-wrap:wrap;gap:12px;
+    margin:34px 0 8px;
+  }
+  .stat{
+    flex:1 1 140px;
+    background:#fff;
+    border:1px solid var(--line);
+    border-top:4px solid var(--navy);
+    border-radius:4px;
+    padding:18px 10px 14px;
+    text-align:center;
+    box-shadow:0 1px 0 rgba(0,0,0,.03);
+  }
+  .stat .v{
+    font-family:"Zen Old Mincho",serif;
+    font-weight:900;
+    font-size:2.2rem;
+    color:var(--navy);
+    line-height:1;
+  }
+  .stat.gold{border-top-color:var(--gold);}
+  .stat.gold .v{color:var(--gold);}
+  .stat .l{font-size:.78rem;color:#6b5d45;margin-top:8px;letter-spacing:.05em;}
+
+  /* ---- 図版カード ---- */
+  figure{
+    margin:34px 0;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:22px 20px 16px;
+    box-shadow:0 2px 10px rgba(26,58,92,.05);
+  }
+  figure figcaption{
+    font-family:"Zen Old Mincho",serif;
+    font-size:1rem;
+    color:var(--navy);
+    font-weight:700;
+    margin-bottom:16px;
+    padding-bottom:10px;
+    border-bottom:1px dashed var(--line);
+  }
+  figure .note{font-size:.74rem;color:#8a7c62;margin-top:12px;line-height:1.7;}
+  svg{display:block;width:100%;height:auto;}
+
+  /* ---- テーブル ---- */
+  table{width:100%;border-collapse:collapse;font-size:.92rem;margin-top:4px;}
+  caption{caption-side:top;text-align:left;}
+  th,td{padding:9px 8px;border-bottom:1px solid var(--line);text-align:right;}
+  th:first-child,td:first-child{text-align:left;}
+  thead th{
+    background:var(--navy);color:var(--washi);font-weight:600;
+    font-family:"Zen Old Mincho",serif;letter-spacing:.02em;
+    border-bottom:none;
+  }
+  tbody tr.ichi{background:rgba(184,150,12,.12);}
+  tbody tr.ichi td{font-weight:700;color:var(--navy);}
+  .era{font-size:.72rem;color:#8a7c62;}
+
+  /* ---- 引用/囲み ---- */
+  .pull{
+    font-family:"Zen Old Mincho",serif;
+    font-size:1.4rem;
+    color:var(--navy);
+    text-align:center;
+    line-height:1.8;
+    margin:44px auto;
+    max-width:600px;
+    font-weight:600;
+  }
+  .pull span{color:var(--vermillion);}
+  .box{
+    background:#fbf8f0;
+    border:1px solid var(--line);
+    border-left:4px solid var(--navy);
+    border-radius:4px;
+    padding:16px 20px;
+    margin:26px 0;
+    font-size:.95rem;
+  }
+  .box b{color:var(--navy);}
+  .caution{border-left-color:var(--vermillion);}
+  .caution b{color:var(--vermillion);}
+
+  hr.sep{
+    border:none;
+    height:1px;
+    background:var(--line);
+    margin:56px 0;
+  }
+
+  /* ---- UCA フッター ---- */
+  .uca-footer{
+    background:#fbf8f0;
+    border:1px solid var(--gold);
+    border-left:5px solid var(--gold);
+    border-radius:6px;
+    padding:26px 24px 24px;
+    margin:56px 0 0;
+    text-align:center;
+  }
+  .uca-footer .uca-mark{
+    font-family:"Zen Old Mincho",serif;
+    font-weight:900;
+    font-size:1.5rem;
+    letter-spacing:.32em;
+    color:var(--gold);
+    padding-left:.32em;
+  }
+  .uca-footer .uca-lead{
+    font-family:"Zen Old Mincho",serif;
+    color:var(--navy);
+    font-size:1.05rem;
+    margin:8px 0 16px;
+  }
+  .uca-footer .uca-body{
+    font-size:.9rem;
+    color:var(--ink);
+    line-height:1.9;
+    max-width:600px;
+    margin:0 auto 18px;
+    text-align:left;
+  }
+  .uca-footer a.uca-link{
+    color:var(--gold);
+    font-weight:700;
+    letter-spacing:.08em;
+    text-decoration:none;
+    border-bottom:1px solid var(--gold);
+  }
+  .uca-footer a.uca-btn{
+    display:inline-block;
+    background:var(--navy);
+    color:var(--washi);
+    font-family:"Zen Old Mincho",serif;
+    font-size:.95rem;
+    letter-spacing:.06em;
+    text-decoration:none;
+    padding:11px 26px;
+    border-radius:4px;
+  }
+  footer{
+    text-align:center;
+    color:#8a7c62;
+    font-size:.82rem;
+    margin-top:60px;
+    padding-top:26px;
+    border-top:2px solid var(--gold);
+    line-height:1.9;
+  }
+  footer .fig51{
+    font-family:"Zen Old Mincho",serif;
+    font-size:1.1rem;color:var(--navy);
+  }
+  @media(max-width:520px){
+    header.hero h1{font-size:1.8rem;}
+    header.hero .big262{font-size:3.8rem;}
+    body{font-size:16px;}
+    .stat .v{font-size:1.8rem;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <p class="kicker">数字が語る、ひとつの到達点</p>
+  <h1>262という聖域</h1>
+  <div class="big262">262</div>
+  <p style="font-family:'Zen Old Mincho',serif;font-size:1.05rem;letter-spacing:.15em;margin:0;color:#e7ddc7;">
+    イチロー・シーズン最多安打は<br>なぜ破られないのか
+  </p>
+  <p class="sub">
+    2004年、イチロー選手はメジャーリーグのシーズン最多安打記録を262本に塗り替えた。
+    それから20年余り、誰ひとりこの数字に迫れていない。
+    ここでは確認できた記録だけを手がかりに、この到達点の「重さ」を、打率と打数という一枚の掛け算からたどってみたい。
+  </p>
+</header>
+
+<div class="wrap">
+<main>
+
+  <div class="statrow">
+    <div class="stat gold"><div class="v">262</div><div class="l">シーズン安打<br>（MLB歴代1位）</div></div>
+    <div class="stat"><div class="v">.372</div><div class="l">打率<br>（同年MLB1位）</div></div>
+    <div class="stat"><div class="v">704</div><div class="l">打数<br>（歴代3位）</div></div>
+    <div class="stat"><div class="v">49</div><div class="l">四球<br>（極端に少ない）</div></div>
+  </div>
+  <p class="note" style="font-size:.76rem;color:#8a7c62;margin-top:4px;">
+    2004年シーズン成績より。225本が単打で、生還打点は60。四球はわずか49だった。
+  </p>
+
+  <p class="lead">
+    野球という競技は、ときにひどく単純な数式に支配される。安打の数は、結局のところ「打率 × 打数」の掛け算でしかない。
+    このあまりに素朴な等式こそが、いまのMLBがこの記録からどれほど遠ざかってしまったかを、静かに物語っているのではないか。
+  </p>
+
+  <p>
+    背番号51。打席で見つめる先にある262という数字は、単なる過去の栄光ではないように思う。
+    それは現代野球が手放してしまった何かであり、そしておそらく、これから先も取り戻せない道しるべなのだ。
+    これは感傷的な思い出話ではなく、データが指し示すひとつの見立てだと、私は感じている。
+  </p>
+
+
+  <!-- ============ 1 ============ -->
+  <h2><span class="num">STEP 1 ── 出発点</span>262 = 打率 × 打数という等式</h2>
+
+  <p>
+    すべての謎を解く鍵は、この単純すぎる式に隠れている。シーズンの安打数は、<span class="navy-b">「ヒットを打つ確率（打率）」</span>に
+    <span class="navy-b">「そもそも何回バットを振る機会があったか（打数）」</span>を掛けたものにすぎない。
+    高い打率を残せば必要な打数は減り、打率が低ければより多くの打数が要る。これは絶対の関係だ。
+  </p>
+
+  <p>
+    イチロー選手がこの式を成立させたやり方は、実に彼らしいものだった。<strong>225本もの単打</strong>を積み上げ、四球はわずか49。
+    出塁率よりも、まず打席に立ち、まず打つこと。四球を選べば打席は消費されるが、打数にはカウントされない。
+    彼は「安打を打つ確率」を下げないまま、分母である「打数」を最大化した。効率を最優先する現代の価値観からすれば、ある意味で非現代的なアプローチを貫いたことになる。
+  </p>
+
+  <div class="box">
+    <b>ことばの整理</b><br>
+    打数（AB）… 打席のうち、四球・死球・犠打などを除いた「打った回数」。打率の分母になる。<br>
+    四球（BB）… 打席は消えるが、打数には数えられない。だから四球が多いほど、同じ試合数でも打数は減っていく。
+  </div>
+
+
+  <!-- ============ 2 ============ -->
+  <h2><span class="num">STEP 2 ── 過酷なシミュレーション</span>その記録に挑むには、何打数要るのか</h2>
+
+  <p>
+    もしあなたが未来のスーパースターとして262本に挑むなら、どれほどの数字が要るのか。打率ごとに必要打数を計算すると、その壁の高さがはっきり見えてくる。
+  </p>
+
+  <figure>
+    <figcaption>打率別・262安打に必要な打数</figcaption>
+    <svg viewBox="0 0 620 300" role="img" aria-label="打率別に必要な打数の棒グラフ">
+      <!-- 基準線 716 (打数の歴代最多) -->
+      <!-- スケール: x=140が0打数, x=600が820打数。 460px幅 / 820 = 0.561 px per AB -->
+      <!-- ref line at 716 -> 140 + 716*0.561 = 140+401.7 = 541.7 -->
+      <line x1="541.7" y1="30" x2="541.7" y2="272" stroke="#8b2e2e" stroke-width="1.4" stroke-dasharray="5 4"/>
+      <text x="541.7" y="22" fill="#8b2e2e" font-size="11" text-anchor="middle" font-family="'Shippori Mincho',serif">打数の歴代最多 716（J.ロリンズ '07）</text>
+
+      <!-- rows -->
+      <!-- .330 -> 794 AB -> width 794*0.561=445.5 -->
+      <g font-family="'Shippori Mincho',serif" font-size="13">
+        <text x="130" y="58" text-anchor="end" fill="#1a1208">打率 .330</text>
+        <rect x="140" y="44" width="445.5" height="24" fill="#8b2e2e" rx="2"/>
+        <text x="592" y="61" text-anchor="end" fill="#fff" font-weight="700" font-size="13">794</text>
+
+        <text x="130" y="98" text-anchor="end" fill="#1a1208">打率 .350</text>
+        <rect x="140" y="84" width="420.2" height="24" fill="#8b2e2e" rx="2"/>
+        <text x="553" y="101" text-anchor="end" fill="#fff" font-weight="700" font-size="13">749</text>
+
+        <text x="130" y="138" text-anchor="end" fill="#1a1208" font-weight="700">打率 .372 ★</text>
+        <rect x="140" y="124" width="394.9" height="24" fill="#b8960c" rx="2"/>
+        <text x="527" y="141" text-anchor="end" fill="#fff" font-weight="700" font-size="13">704（実際）</text>
+
+        <text x="130" y="178" text-anchor="end" fill="#1a1208">打率 .380</text>
+        <rect x="140" y="164" width="387.1" height="24" fill="#2c516f" rx="2"/>
+        <text x="520" y="181" text-anchor="end" fill="#fff" font-weight="700" font-size="13">690</text>
+
+        <text x="130" y="218" text-anchor="end" fill="#1a1208">打率 .400</text>
+        <rect x="140" y="204" width="367.5" height="24" fill="#2c516f" rx="2"/>
+        <text x="500" y="221" text-anchor="end" fill="#fff" font-weight="700" font-size="13">655</text>
+      </g>
+      <line x1="140" y1="30" x2="140" y2="248" stroke="#d9cfb8" stroke-width="1.2"/>
+    </svg>
+    <p class="note">
+      赤い破線は「シーズン打数の歴代最多記録（716打数）」。打率 .330 でも .350 でも、必要打数はこの記録を超えてしまい、現実味がない。
+      イチロー選手の .372 は歴代最高水準の打率でありながら、打数704で辛うじて“土俵の内側”に収まった、稀な均衡だったといえる。
+      ※必要打数は 262 ÷ 打率 の概算。
+    </p>
+  </figure>
+
+  <p>
+    伝説の .400 を達成できれば必要打数は655まで下がり、現代のトップ打者でも届く範囲に入る。
+    ただ、MLBで最後に4割を打ったのは<strong>1941年のテッド・ウィリアムズ選手</strong>。それ以来、80年以上も誰ひとり到達していない領域だ。
+    どの道を選んでも、打率か打数か、あるいはその両方で、歴史を塗り替える「外れ値」が必要条件になる。
+  </p>
+
+
+  <!-- ============ 3 ============ -->
+  <h2><span class="num">STEP 3 ── 歴史のなかの異質さ</span>歴代ランキングが示す「たった一人」</h2>
+
+  <p>
+    シーズン最多安打の歴代上位を並べると、イチロー選手の異質さが一目でわかる。上位に名を連ねる打者たちは、そのほとんどが1920〜30年代、
+    いわゆる<span class="navy-b">ライブボール時代</span>の怪物たちなのだ。ボールがよく飛ぶようになり、投手が一つのボールを投げ続け、球種も少なかった、打者有利の時代である。
+  </p>
+
+  <figure>
+    <figcaption>MLBシーズン最多安打・歴代トップ8</figcaption>
+    <svg viewBox="0 0 620 340" role="img" aria-label="シーズン最多安打の歴代ランキング棒グラフ">
+      <!-- scale: x0=170 for 240 hits baseline, x=600 for 265. range 25 hits over 430px => 17.2 px/hit -->
+      <!-- width = (hits-240)*17.2 -->
+      <g font-family="'Shippori Mincho',serif" font-size="12.5">
+        <!-- Ichiro 262 2004 -->
+        <text x="162" y="34" text-anchor="end" fill="#1a1208" font-weight="700">イチロー</text>
+        <rect x="170" y="20" width="378.4" height="22" fill="#b8960c" rx="2"/>
+        <text x="556" y="36" fill="#b8960c" font-weight="800" font-size="13">262</text>
+        <text x="176" y="35" fill="#fff" font-size="10">2004年 ★現代でただ一人</text>
+
+        <!-- Sisler 257 1920 -->
+        <text x="162" y="66" text-anchor="end" fill="#1a1208">G.シスラー</text>
+        <rect x="170" y="52" width="292.4" height="22" fill="#1a3a5c" rx="2"/>
+        <text x="470" y="68" fill="#1a3a5c" font-weight="700">257</text>
+        <text x="176" y="67" fill="#fff" font-size="10" class="era">1920年</text>
+
+        <!-- O'Doul 254 1929 -->
+        <text x="162" y="98" text-anchor="end" fill="#1a1208">L.オドール</text>
+        <rect x="170" y="84" width="240.8" height="22" fill="#1a3a5c" rx="2"/>
+        <text x="418" y="100" fill="#1a3a5c" font-weight="700">254</text>
+        <text x="176" y="99" fill="#fff" font-size="10">1929年</text>
+
+        <!-- Terry 254 1930 -->
+        <text x="162" y="130" text-anchor="end" fill="#1a1208">B.テリー</text>
+        <rect x="170" y="116" width="240.8" height="22" fill="#1a3a5c" rx="2"/>
+        <text x="418" y="132" fill="#1a3a5c" font-weight="700">254</text>
+        <text x="176" y="131" fill="#fff" font-size="10">1930年</text>
+
+        <!-- Simmons 253 1925 -->
+        <text x="162" y="162" text-anchor="end" fill="#1a1208">A.シモンズ</text>
+        <rect x="170" y="148" width="223.6" height="22" fill="#2c516f" rx="2"/>
+        <text x="401" y="164" fill="#1a3a5c" font-weight="700">253</text>
+        <text x="176" y="163" fill="#fff" font-size="10">1925年</text>
+
+        <!-- Hornsby 250 1922 -->
+        <text x="162" y="194" text-anchor="end" fill="#1a1208">R.ホーンスビー</text>
+        <rect x="170" y="180" width="172" height="22" fill="#2c516f" rx="2"/>
+        <text x="349" y="196" fill="#1a3a5c" font-weight="700">250</text>
+        <text x="176" y="195" fill="#fff" font-size="10">1922年</text>
+
+        <!-- Klein 250 1930 -->
+        <text x="162" y="226" text-anchor="end" fill="#1a1208">C.クライン</text>
+        <rect x="170" y="212" width="172" height="22" fill="#2c516f" rx="2"/>
+        <text x="349" y="228" fill="#1a3a5c" font-weight="700">250</text>
+        <text x="176" y="227" fill="#fff" font-size="10">1930年</text>
+
+        <!-- Cobb 248 1911 -->
+        <text x="162" y="258" text-anchor="end" fill="#1a1208">T.カッブ</text>
+        <rect x="170" y="244" width="137.6" height="22" fill="#2c516f" rx="2"/>
+        <text x="315" y="260" fill="#1a3a5c" font-weight="700">248</text>
+        <text x="176" y="259" fill="#fff" font-size="10">1911年</text>
+      </g>
+      <line x1="170" y1="14" x2="170" y2="272" stroke="#d9cfb8"/>
+      <text x="170" y="292" font-size="11" fill="#8a7c62" font-family="'Shippori Mincho',serif">← 目盛りは240安打から。バーの長短ではなく「達成年」に注目したい。</text>
+    </svg>
+    <p class="note">
+      上位2〜8位はすべて1930年以前の記録。データ分析が進み、投手のレベルも格段に上がった2000年代以降で、このリストに載る打者はイチロー選手ただ一人だ。
+      3位のオドール選手は打率 .398、シスラー選手は .407、テリー選手は .401 と、当時は高打率が並ぶ環境だった点も押さえておきたい。
+    </p>
+  </figure>
+
+  <p class="pull">
+    時代の質そのものが違う。<br>その中で、<span>ただ一人だけ</span>時空を超えている。
+  </p>
+
+
+  <!-- ============ 4 ============ -->
+  <h2><span class="num">STEP 4 ── 分母の異常性</span>史上4人しかいない「700打数」の領域</h2>
+
+  <p>
+    記録を語るとき、どうしても打率という華やかな数字に目が行く。だが土台となった打数のほうも、実は異常な領域にあった。
+    シーズンで<strong>700打数以上</strong>を記録した選手は、長いMLBの歴史でわずか4人しかいない。
+  </p>
+
+  <figure>
+    <figcaption>シーズン700打数を超えた4人（MLB史上すべて）</figcaption>
+    <table>
+      <thead>
+        <tr><th>選手</th><th>打数</th><th>年</th><th>打率</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>J.ロリンズ</td><td>716</td><td>2007</td><td>.296</td></tr>
+        <tr><td>W.ウィルソン</td><td>705</td><td>1980</td><td>.326</td></tr>
+        <tr class="ichi"><td>イチロー ★</td><td>704</td><td>2004</td><td>.372</td></tr>
+        <tr><td>J.サミュエル</td><td>701</td><td>1984</td><td>.272</td></tr>
+      </tbody>
+    </table>
+    <p class="note">
+      ほぼ全試合に出て、毎試合コンスタントに4打席以上に立ち、しかも四球をほとんど選ばない。これを1年間維持しないと届かない、まさに鉄人の領域だ。
+      他の3人が驚異的な耐久性の持ち主だったことは間違いない。だが真の異常さは、イチロー選手だけがこの打数を保ちながら、同時に<strong>打率 .372</strong>という史上最高水準を叩き出した点にある。
+    </p>
+  </figure>
+
+  <p>
+    ふつうに考えれば、出場が増え打数がかさむほど疲労は蓄積し、打率は下がっていくはずだ。打数と打率という相反する2つの要素を、彼は同じシーズンに同時に極大化させてしまった。
+    この一点にこそ、262安打という記録の、誰にも真似できない本質があるように思う。
+  </p>
+
+
+  <!-- ============ 5 ============ -->
+  <h2><span class="num">STEP 5 ── 時代の地殻変動</span>三振の増加が奪った「打つ機会」</h2>
+
+  <p>
+    2004年以降、MLBというグラウンドは地殻変動と呼べるほど姿を変えた。最大の要因が、右肩上がりに増え続ける三振である。
+    投手はより速く、より鋭く曲がる球を追求し、打ちにくいとされる高めの速球や落ちる変化球を多投するようになった。
+    データ分析の進化が、打者から三振を奪うことこそ正義だと教えたのだ。
+  </p>
+
+  <figure>
+    <figcaption>MLB全体の三振率（打席に占める割合）の変化</figcaption>
+    <svg viewBox="0 0 620 260" role="img" aria-label="三振率の推移を示す棒グラフ">
+      <!-- baseline y=210, scale 8px per 1% -->
+      <g font-family="'Shippori Mincho',serif">
+        <!-- 2004 16.9 -->
+        <rect x="110" y="75" width="90" height="135" fill="#2c516f" rx="3"/>
+        <text x="155" y="66" text-anchor="middle" fill="#1a3a5c" font-weight="800" font-size="20">16.9%</text>
+        <text x="155" y="230" text-anchor="middle" fill="#1a1208" font-size="13">2004年</text>
+        <text x="155" y="247" text-anchor="middle" fill="#8a7c62" font-size="11">262安打の年</text>
+
+        <!-- peak ~2021 23.4 -->
+        <rect x="270" y="23" width="90" height="187" fill="#8b2e2e" rx="3"/>
+        <text x="315" y="16" text-anchor="middle" fill="#8b2e2e" font-weight="800" font-size="20">23.4%</text>
+        <text x="315" y="230" text-anchor="middle" fill="#1a1208" font-size="13">2021年ごろ</text>
+        <text x="315" y="247" text-anchor="middle" fill="#8a7c62" font-size="11">過去最高水準</text>
+
+        <!-- 2024 ~22.6 -->
+        <rect x="430" y="29" width="90" height="181" fill="#b8960c" rx="3"/>
+        <text x="475" y="22" text-anchor="middle" fill="#b8960c" font-weight="800" font-size="20">22.6%</text>
+        <text x="475" y="230" text-anchor="middle" fill="#1a1208" font-size="13">2024年</text>
+        <text x="475" y="247" text-anchor="middle" fill="#8a7c62" font-size="11">高止まり</text>
+      </g>
+      <line x1="90" y1="210" x2="540" y2="210" stroke="#d9cfb8" stroke-width="1.4"/>
+    </svg>
+    <p class="note">
+      2004年に約16.9%だった三振率は、近年は22〜23%台で高止まりしている。約6ポイントの上昇だ。
+      三振は絶対に安打にならない。バットに当たらなければヒットの可能性はゼロ。この上昇は、安打が生まれ得た無数の打席を静かに消し去ってきた。
+      ※三振率は年ごとに変動するため、代表的な年の概数を示している。
+    </p>
+  </figure>
+
+  <h3>セイバーメトリクスの罠 ── 「賢く四球を選ぶ」ほど、打数は消える</h3>
+  <p>
+    現代野球を語るうえで欠かせないのが、統計的アプローチであるセイバーメトリクスだ。その中心には<span class="navy-b">出塁率重視</span>、つまり「アウトにならないことこそ価値」という考え方がある。
+    そしてアウトになる確率が最も低い行為が、四球を選ぶことだ。
+  </p>
+  <p>
+    ここに、記録から見れば皮肉な罠がある。四球は打席を1つ消費するが、打率の分母である<strong>打数には数えられない</strong>。
+    賢く四球を選ぶほどチームへの貢献は高まる一方で、安打を積む機会は失われていく。
+    さらに近年は、怪我を防ぎ好調を保つための計画的な休養（ロードマネジメント）も一般化した。その結果、現代のトップ打者の年間打数は、多くても650〜680程度に抑えられている。
+  </p>
+  <div class="box">
+    <b>四球49という数字の意味</b><br>
+    イチロー選手の四球49は、現代の価値観からすれば「非効率」かもしれない。だがその積極性こそが、704打数という厳選された分母を生んだ。
+    2010年以降のシーズン打数の最多は684（I.キンズラー '14）にとどまる。彼の704は、いまの環境ではもう出てこない数字なのだ。
+  </div>
+
+
+  <!-- ============ ルール ============ -->
+  <h2><span class="num">補論 ── 制度は追い風になるか</span>シフト制限とABS、その実像</h2>
+
+  <p>
+    近年MLBは、いくつか大きなルール変更に踏み切った。これらは262安打への追い風になり得るのだろうか。ここは、期待と事実を分けて見ておきたい。
+  </p>
+
+  <h3>2023年の守備シフト制限</h3>
+  <p>
+    2023年、極端な守備シフトが制限された（同年にはピッチクロックやベース拡大も導入されている）。ヒットゾーンが広がると期待され、実際に導入直後はインプレー打球の安打率（BABIP）やリーグ打率がわずかに持ち直した。
+    だが、その効果は長続きしなかったと報じられている。投手とチームが新たな対策を講じ、恩恵は一時的なものにとどまった、という見方が強い。
+  </p>
+
+  <div class="box caution">
+    <b>ここは注意して読みたい ── ABS（2026年）について</b><br>
+    2026年から導入されたABS（自動ボール・ストライク判定）は、しばしば「ロボット審判」と呼ばれるが、
+    実際に始まったのは<b>全球を機械が判定する方式ではなく「チャレンジ（挑戦）制」</b>だ。
+    各チームが1試合に2回まで、際どい判定に異議を申し立て、機械が再判定する仕組みである（成功すれば権利は減らない）。
+    MLBは全球自動化ではなく、あえてこの限定的な方式を選んだ。<br><br>
+    したがって「ABSでゾーンが厳密になり、四球率が大きく跳ね上がる」という話は、少なくとも2026年の挑戦制については<b>断定できない</b>。
+    全球自動化を試したマイナーでは四球増が観測されたが、MLBが採用したのはそちらではない。ここは、確定した事実というより今後の観測待ちと考えるのが正確だろう。
+  </div>
+
+  <p>
+    いずれにせよ、これらの制度変更が「262安打を蘇らせる特効薬」になるとは考えにくい。打者から打数を奪う構造そのものは、そう簡単には動かないのではないか。
+  </p>
+
+
+  <!-- ============ アラエス ============ -->
+  <h2><span class="num">現代最強の試金石</span>ルイス・アラエスをもってしても届かない</h2>
+
+  <p>
+    もし現代に、この記録へ挑める打者がいるとすれば誰か。多くの人が挙げるのが<span class="navy-b">ルイス・アラエス選手</span>だろう。三振を恐れず広角に打ち分ける、現代に生きるコンタクトヒッターの結晶だ。
+    かつての恩師ネルソン・クルーズ選手は、彼を全盛期のイチロー選手になぞらえたという。
+  </p>
+
+  <figure>
+    <figcaption>イチロー 2004 vs アラエス 2023</figcaption>
+    <table>
+      <thead>
+        <tr><th>項目</th><th>イチロー (2004)</th><th>アラエス (2023)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>打率</td><td>.372</td><td>.354</td></tr>
+        <tr><td>安打</td><td>262</td><td>203</td></tr>
+        <tr class="ichi"><td>打数</td><td>704</td><td>約574</td></tr>
+        <tr><td>三振（率）</td><td>63</td><td>34（5.5%）</td></tr>
+      </tbody>
+    </table>
+    <p class="note">
+      アラエス選手の2023年は驚異的だった。規定打席に到達しながら三振はわずか34、三振率5.5%はStatcast時代でも屈指の低さ。シーズン途中には打率が.400に乗った時期さえあった。
+      それでも安打は203本。イチロー選手とは<strong>59本もの差</strong>がある。原因は打率ではない。休養と四球により確保できた打数が約574にとどまり、イチロー選手との打数差は<strong>約130</strong>にのぼったからだ。
+    </p>
+  </figure>
+
+  <p>
+    どれほど優れたバットコントロールを持っていても、そもそもバットを振る機会が少なければ、安打の山は築けない。
+    アラエス選手の存在は、皮肉にも「現代野球がいかに分母＝打数を稼ぎにくくなっているか」を証明する、最強の試金石になってしまったように思う。
+  </p>
+
+  <h3>崩れゆく「200安打」という壁</h3>
+  <p>
+    かつてシーズン200安打は一流打者の証だった。2000年代には毎年8〜10人が到達していた年もある。だが2020年代に入ると、達成者は年に0〜数人まで激減した。
+    2004年以降、イチロー選手の262本の37本以内に迫った打者は一人もいない。2010年以降で見ても、225本を放ったアルトゥーベ選手（2014年）を除けば、216本を超えた者すらいないのだ。
+  </p>
+  <p>
+    リーグを代表する打者でさえ200安打の壁に苦しむ現実を踏まえて、あらためて262を見つめ直すと──それはもはや、同じ地平にある目標ではない。
+    トップ打者の到達点から、さらにもう一人分に近い安打を上乗せするような数字なのだ。
+  </p>
+
+
+  <!-- ============ 結論 ============ -->
+  <h2><span class="num">結論</span>二重の外れ値という、静かな絶望</h2>
+
+  <p>
+    記録の本質は、ここに集約されるのではないか。イチロー選手が成し遂げたのは、<strong>「二重の外れ値」を同時に達成した</strong>という一点に尽きる。
+    歴史的な外れ値の打率と、歴史的な外れ値の打数。262安打は、この2つの円が重なり合う、極めて狭い領域でしか生まれない。
+  </p>
+
+  <figure>
+    <figcaption>262が生まれる場所 ── 二つの外れ値の重なり</figcaption>
+    <svg viewBox="0 0 620 280" role="img" aria-label="打率と打数の重なりを示すベン図">
+      <circle cx="245" cy="140" r="120" fill="#1a3a5c" fill-opacity="0.16" stroke="#1a3a5c" stroke-width="1.5"/>
+      <circle cx="375" cy="140" r="120" fill="#8b2e2e" fill-opacity="0.16" stroke="#8b2e2e" stroke-width="1.5"/>
+      <text x="175" y="120" text-anchor="middle" fill="#1a3a5c" font-family="'Zen Old Mincho',serif" font-weight="700" font-size="16">歴史的な</text>
+      <text x="175" y="144" text-anchor="middle" fill="#1a3a5c" font-family="'Zen Old Mincho',serif" font-weight="700" font-size="16">打率</text>
+      <text x="175" y="166" text-anchor="middle" fill="#1a3a5c" font-size="12">.372</text>
+      <text x="445" y="120" text-anchor="middle" fill="#8b2e2e" font-family="'Zen Old Mincho',serif" font-weight="700" font-size="16">歴史的な</text>
+      <text x="445" y="144" text-anchor="middle" fill="#8b2e2e" font-family="'Zen Old Mincho',serif" font-weight="700" font-size="16">打数</text>
+      <text x="445" y="166" text-anchor="middle" fill="#8b2e2e" font-size="12">704</text>
+      <circle cx="310" cy="140" r="34" fill="#b8960c"/>
+      <text x="310" y="135" text-anchor="middle" fill="#fff" font-family="'Zen Old Mincho',serif" font-weight="900" font-size="24">262</text>
+      <text x="310" y="156" text-anchor="middle" fill="#fff" font-size="10">この重なり</text>
+    </svg>
+    <p class="note">
+      高い打率を残せる才能ある選手は、より四球を選ぶよう導かれ、大切に休養を与えられる。逆にがむしゃらに打数を稼ごうとする選手は「非効率」と評価されがちだ。
+      三振が奨励され、四球が尊ばれ、休養が常態化した現代では、この2つの円は、進化すればするほど遠ざかっていくのではないか。
+    </p>
+  </figure>
+
+  <p class="lead">
+    物理的に不可能だと言いたいのではない。ただ、三振率の上昇、出塁率の重視、打席経済の効率化という現代野球の“進化”そのものが、
+    この記録の達成をきわめて遠いものにしている。それは誰かの思い込みでも神話でもなく、打率 × 打数という素朴な掛け算が導く、静かな見立てだと私は感じている。
+  </p>
+
+  <p>
+    グラウンドに一人立つその姿は、まるで未来の挑戦者たちにこう語りかけているようだ。
+    ──君たちが賢さを手に入れるほどに、私の記録は遠くなる、と。
+    262という数字は、野球の進化そのものが刻んだ金字塔として、これからも語り継がれていくに違いない。
+  </p>
+
+  <hr class="sep">
+
+  <div class="box">
+    <b>この記事の数字について</b><br>
+    本文の記録は、Baseball-Reference・MLB公式・Retrosheet 等の公開データで確認できた値をもとにしている。
+    打率や打数の一部（アラエス選手の打数など）は、参照元により1前後の差が出ることがあるため「約」を付した。
+    三振率は年ごとに変動するため代表的な年の概数を用いた。ABSに関する記述は2026年時点の「挑戦制」の内容にもとづく。
+    確認できなかった推測は、事実と分けて記した。
+  </div>
+  <div class="uca-footer">
+    <div class="uca-mark">UCA</div>
+    <p class="uca-lead">知識は解放され、創造者は報われる。</p>
+    <p class="uca-body">
+      本記事のデータは、出典（Baseball-Reference・MLB公式・Retrosheet ほか）を明記して用いています。「誰が創り、誰が調べたのか」を確実に記録し、創造した人に正当な対価が還る──その仕組みを、ブロックチェーン技術で実現しようとするのが、制作者の提案する
+      <a class="uca-link" href="https://yymm77.github.io/seimei-kagaku/copyright-proposal.html" target="_blank" rel="noopener">UCA</a>（Universal Creative Attribution）です。知的創造物の適正な帰属と対価還元を推進するこの取り組みに、本記事も賛同しています。
+    </p>
+    <a class="uca-btn" href="https://yymm77.github.io/seimei-kagaku/copyright-proposal.html" target="_blank" rel="noopener">▶ 新著作権の構想を読む</a>
+  </div>
+
+</main>
+
+<footer>
+  <p class="fig51">背番号51が残した、262という到達点。</p>
+  <p>© 記事内のデータ出典：Baseball-Reference / MLB.com / Retrosheet ほか公開資料</p>
+</footer>
+</div>
+
+</body>
+</html>
